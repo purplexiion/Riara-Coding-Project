@@ -1,8 +1,21 @@
-body{
-  font-family: Avenir;
+*{
+  font-family: Avenir,'Cormorant', serif;
 }
 
+ .heading-main{
+  font-size:3rem;
+  font-weight: bold;
+  align-self: center;
+  align-content: center;  
+  text-align: center;
+  color: #950EA4;
 
+}
+
+.headings{
+  color: #950EA4;
+  font-weight: bold;
+}
 /* MAKING THE NAVIGATION BAR*/
 /* Navbar container */
 .navbar{
@@ -17,7 +30,7 @@ body{
   display: inline;
 }
 .navbar img{
-  width:70%;
+  width:0%;
   height:90%;
   background: transparent;
 }
@@ -176,10 +189,14 @@ body{
 /*SLIDESHOWS FOR DISPLAYING THE SCHOOLS*/
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
     position: relative;
     margin: auto;
     z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:0px;
+    display:block;
+    overflow: hidden;
   }
   
   /* Hide the images by default */
@@ -188,12 +205,12 @@ body{
   }
   
   .mySlides img{
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
     align-items: center;
-    align-self: center;
+    padding: 20px 20px 20px 20px;
+    border: 6px double #1C6EA4;
   }
-  
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
@@ -223,13 +240,16 @@ body{
   
   /* Caption text */
   .text {
-    color: #8c09f0;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 16px;
-    width: 100%;
+    padding: 5px 5px 5px 12px;
+    top: 16px;
+    width: 535px;
+    height: 40px;
     text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color:black;
+   text-align: center;
+   background-color: #f0ecf3;
   }
   
   /* Number text (1/3 etc) */
@@ -258,9 +278,9 @@ body{
   }
   
   /* Fading animation */
-  .fade {
+  .slide {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
   }
   
   @keyframes fade {
@@ -302,7 +322,7 @@ h1.heading{
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 475px;
+  height: 600px;
   border: 1px solid black;
   margin: 10px;
   align-items: center;
@@ -317,7 +337,7 @@ h1.heading{
   background-position: left bottom;
   color: rgb(134, 16, 208);
   border: none;
-  box-shadow: 0 0 20px rgb(74, 15, 151);
+  box-shadow: 0 0 20px rgb(214, 210, 219);
 }
 
 .box button{
@@ -337,18 +357,21 @@ h1.heading{
   ;
 }
 .box button:hover{
-  background: #950EA4; 
+  background: #dccbde; 
 }
   .box button:active {
-  background: #950EA4; 
+  background: #f6d5fa; 
 }
 
 /*COLUMNS FOR THE MISSION AND VISION STATEMENT*/
 .column {
   float: left;
   width: 50%;
+  column-rule: 4px double #ff00ff;
 }
-
+.column h1{
+  align-content: center;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -366,6 +389,6 @@ h1.heading{
 p.creator{
   font-weight: bold;
   font-size: 0.8rem;
- color:white;
+ color:black;
  text-align: center;
 }

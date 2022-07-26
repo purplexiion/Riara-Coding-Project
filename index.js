@@ -1,8 +1,8 @@
 //SLIDESHOWS BAR == DISPLAYING THE TYPE OF SCHOOLS AT RIARA GROUP OF SCHOOLS
 let slideIndex = 0;
-showSlide();
+showSlides();
 
-function showSlide() {
+function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
