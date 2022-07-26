@@ -1,0 +1,367 @@
+body{
+  font-family: Avenir;
+}
+
+
+/* MAKING THE NAVIGATION BAR*/
+/* Navbar container */
+.navbar{
+  height: 70px;
+  width: 90%;
+  padding: 19px 30px;
+  background-color: #B43C8A;
+  position: relative;
+  z-index: 1;
+}
+.navbar .nav-header{
+  display: inline;
+}
+.navbar img{
+  width:70%;
+  height:90%;
+  background: transparent;
+}
+.navbar .nav-header .nav-logo{
+  display: inline-block;
+  margin-top: -7px;
+}
+.navbar .nav-links{
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+ 
+.navbar .nav-links {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-left: 20px;
+  font-size: 17px;
+  color:  #B43C8A;
+}
+.navbar .nav-links a {
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: 550;
+  color: white;
+}
+/* Hover effects */
+.navbar .nav-links a:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+ 
+/* responsive navbar toggle button */
+.navbar #nav-check, .navbar .nav-btn{
+  display: none;
+}
+ 
+@media (max-width:700px) {
+  .navbar .nav-btn{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .navbar .nav-btn label {
+    display: inline-block;
+    width: 80px;
+    height: 70px;
+    padding: 25px;
+  }
+  .navbar .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top: 3px solid #eee;
+  }
+  .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label {
+    background-color:  #B43C8A;
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 50%;
+    background-color: #B43C8A;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    right: 0px;
+    z-index:2;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+ 
+  /* when nav toggle button not checked */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+ 
+  /* when nav toggle button is checked */
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  .navbar .nav-links .loginBtn {
+    padding: 10px 40px ;
+    margin: 20px;
+    font-size:  18px;
+    font-weight: bold;
+    color:  rgba(0, 0, 0, 0.3);
+    z-index:2;
+
+  }
+  /* Responsive dropdown code */
+  .navbar .nav-links .dropdown, .navbar .nav-links .dropdown2 {
+    float: none;
+    width: 100%;
+    z-index:2
+  }
+  .navbar .nav-links .drop-content, .navbar .nav-links .drop-content2 {
+    position: relative;
+    background-color:  #041646;
+    top: 0px;
+    left: 0px;
+  }
+  /* Text color */
+  .navbar .nav-links .drop-content a {
+    color: white;
+  }  
+ 
+}
+ 
+/* Dropdown menu CSS code */
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.drop-content, .drop-content2 {
+  display: none;
+  position: absolute;
+  background-color: #041646;
+  min-width: 120px;
+  font-size: 16px;
+  top: 34px;
+  z-index: 2;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* on hover show dropdown */
+.dropdown:hover .drop-content, .dropdown2:hover .drop-content2 {
+  display: block;
+}
+/* drondown links */
+.drop-content a {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgb(197, 197, 250);
+  display: block;
+  transition: all 0.5s ease !important;
+}
+.dropBtn .drop-content a:hover {
+  background-color: rgb(230, 230, 230);
+}
+.dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.dropdown2 .drop-content2 {
+  position: absolute;
+  left: 120px;
+  top: 126px;
+}
+.dropBtn2 i {
+  margin-left: 15px;
+}
+
+
+/*SLIDESHOWS FOR DISPLAYING THE SCHOOLS*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    z-index: 0;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  .mySlides img{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-self: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #8c09f0;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
+  /*MAKING SCHOOLS EASY ACCESS BAR*/
+
+#schoolsinfo {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.box img {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 475px;
+  border: 1px solid black;
+  margin: 10px;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(to top, black 50% rgb(128, 54, 54) 50%);
+  background-size: 100% 200%;
+  transition: all .8s;
+}
+
+.box:hover {
+  background-position: left bottom;
+  color: rgb(134, 16, 208);
+  border: none;
+  box-shadow: 0 0 20px rgb(74, 15, 151);
+}
+
+.box button{
+  color: rgb(134, 16, 208);
+  font-size: 19px;
+  line-height: 19px; 
+  padding: 15px; 
+  font-weight: bold;
+  text-decoration: none;
+  font-style: none; 
+  font-variant: normal;
+  text-transform: uppercase; 
+  box-shadow: rgba(0, 0, 0, 0) -100px -100px 15px 5px;
+  border: 2px solid rgb(119, 27, 164); 
+  display: inline-block;
+  font-family: Avenir;
+  ;
+}
+.box button:hover{
+  background: #950EA4; 
+}
+  .box button:active {
+  background: #950EA4; 
+}
+
+/*COLUMNS FOR THE MISSION AND VISION STATEMENT*/
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*CONTACT US PAGE AT THE BOTTOM*/
+.contactUs{
+  background-color:#950EA4;
+  color:white;
+  text-align: center;
+  font-size: 1 rem;
+  align-content: center;
+  text-decoration: none;
+  display: flex;
+}
+.creator p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color:#B43C8A;
+ color:white;
+}
